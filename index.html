@@ -10,13 +10,18 @@
   <body>
     <div id="app">
       <div>
-        <label for="goal">Ziele</label>
-        <input type="text" id="goal" />
-        <button id="submit">Ziel hinzufügen</button>
-      </div>
-      <ul>
-        <li>Test</li>
-      </ul>
-    </div>
+        <input type="text" id="goal" placeholder="Enter a goal">
+        <button id="submit">Add Goal</button>
+        
+        <h3>Active Goals</h3>
+        <ul id="active-goals"></ul>
+        
+        <h3>Completed Goals</h3>
+        <ul id="completed-goals"></ul>
+        
+        <button id="toggle-deleted">Show Deleted Goals</button>
+        <ul id="deleted-goals" style="display: none;"></ul> <!-- Initially hidden -->
+</div>
+
   </body>
 </html>

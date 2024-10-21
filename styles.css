@@ -1,49 +1,136 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
+/* General Styles */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  background-image: linear-gradient(75deg, hsl(234deg 30% 80%), hsl(34deg 30% 80%));
-  background-size: cover;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-
 }
 
-#app {
-  margin: 3rem auto;
-  max-width: 40rem;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+.container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
 }
 
-input, button {
-  border-radius: 0.5em;
+h3 {
+  color: #6a0dad;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-label, input {
-  margin-bottom: 0.5rem;
-  padding: 0.25em;
-  display: block;
+
+/* Input and Button Styles */
+input[type="text"] {
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #6a0dad;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+button {
+  background: linear-gradient(45deg, #6a0dad, #8b1fed);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
   width: 100%;
 }
 
-label {
-  font-weight: bold;
+button:hover {
+  background: linear-gradient(45deg, #8b1fed, #6a0dad);
 }
 
+/* Goal Lists */
 ul {
-  list-style: none;
-  margin: 1rem 0;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
 }
 
 li {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #ccc;
+  background-color: #e8e0f7;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+}
+
+/* Flexible Goal Item Layout */
+li div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between checkbox and text */
+  flex: 1; /* Make the div take up remaining space */
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Completed Goals */
+ul#completed-goals li {
+  text-decoration: line-through;
+  background-color: #d1c4e9;
+  color: #555;
+}
+
+/* Deleted Goals List */
+ul#deleted-goals {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 2px solid #6a0dad;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: none; /* Hidden by default */
+}
+
+/* Deleted Button */
+#toggle-deleted {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #6a0dad;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+#toggle-deleted:hover {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* Delete Button inside each goal */
+li button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f;
 }
