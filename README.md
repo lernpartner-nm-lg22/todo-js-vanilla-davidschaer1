@@ -25,8 +25,4 @@ Vue.createApp({
 
     }
 }).mount('#app');
-```
-
-
-
-mauro meng
+``
